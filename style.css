@@ -1,0 +1,204 @@
+/* VARIABLES */
+:root {
+    --font-family: 'Libre Franklin', sans-serif;
+    
+    --blue: hsl(223, 87%, 63%);
+    --pale-blue: hsl(223, 100%, 88%);
+    --light-red: hsl(354, 100%, 66%);
+    --gray: hsl(0, 0%, 59%);
+    --very-dark-blue: hsl(209, 33%, 12%);
+}
+
+/* BODY */
+*, ::before, ::after
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body
+{
+    font-family: var(--font-family);
+    font-size: 20px;
+}
+
+/* CONTAINER */
+.container
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    width: 100%;
+    min-height: 100vh;
+    padding: 5rem 2rem 2rem;
+}
+
+img
+{
+    width: 100%;
+    height: 100%;
+}
+
+.logo
+{
+    width: 5rem;
+    margin-bottom: 1.5rem;
+}
+
+.head
+{
+    font-size: 2rem;
+    font-weight: 300;
+    margin-bottom: 1.5rem;
+    color: var(--gray);
+}
+
+.head span
+{
+    font-weight: 700;
+    color: var(--very-dark-blue);
+}
+
+.sub
+{
+    font-weight: 300;
+    margin-bottom: 1.5rem;
+    color: var(--very-dark-blue);
+}
+
+form 
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding: 1.5rem;
+    position: relative;
+    margin-bottom: 2rem;
+}
+
+.email
+{
+    width: 100%;
+    padding: 1rem 2rem;
+    border-radius: 50px;
+    border: 2px solid var(--pale-blue);
+    outline: none;
+    font-size: 1rem;
+    color: var(--very-dark-blue);
+}
+
+input.email::placeholder
+{
+    color: var(--pale-blue);
+    font-family: var(--font-family);
+}
+
+.btn
+{
+    width: 100%;
+    padding: 1rem;
+    margin-top: 1.5rem;
+    border-radius: 50px;
+    border: none;
+    outline: none;
+    background-color: var(--blue);
+    color: white;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    box-shadow: 0 0 20px hsla(223, 87%, 63%, 0.35);
+}
+
+.social
+{
+    margin-top: 6rem;
+}
+
+.social i {
+    display: inline-block;
+    width: 2.5rem; 
+    height: 2.5rem;
+    margin: 0 1rem;
+    color: var(--blue);
+    border: 2px solid var(--blue);
+    padding: .6rem;
+    border-radius: 50%;
+    cursor: pointer;
+    line-height: 1.3rem;
+}
+
+.social i:hover
+{
+    color: white;
+    background-color: var(--blue);
+}
+
+.copyright
+{
+    font-size: .8rem;
+    margin-top: 1rem;
+    color: var(--gray);
+}
+
+/* FORM ERROR */
+form.error input.email
+{
+    border: 2px solid var(--light-red);
+    margin-bottom: 1.5rem;
+}
+
+form.error p 
+{
+    color: var(--light-red);
+    font-size: 1rem;
+    position: absolute;
+    top: 70px;
+    margin-top: 1rem;
+    font-style: italic;
+}
+
+
+/* MEDIA QUERIES */
+@media screen and (min-width: 768px)
+{
+    form 
+    {
+        flex-direction: row;
+        max-width: 700px;
+        margin-bottom: 3rem;
+    }
+
+    .email
+    {
+        margin-bottom: 0;
+    }
+
+    .btn
+    {
+        width: 40%;
+        margin: 0;
+        margin-left: 1rem;
+    }
+
+    .hero
+    {
+        max-width: 700px;
+        margin: 0 auto;
+    }
+
+    /* FORM ERROR */
+    form.error input.email
+    {
+        margin: 0;
+    }
+
+    form.error p 
+    {
+        left: 2.5rem;
+    }
+}
